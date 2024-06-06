@@ -1,0 +1,99 @@
+$letter-spacing: 0.9px;
+$links-font-size: 1.1em;
+$links-font-weight: 500;
+
+%a-links {
+  font-size: $links-font-size;
+  letter-spacing: $letter-spacing;
+  font-weight: $links-font-weight;
+  color: var(--text-color);
+  text-decoration: none;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    background: var(--accent);
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--accent), 0 0 5px var(--accent),
+      0 0 20px var(--accent), 0 0 10px var(--accent), 0 0 30px var(--accent),
+      0 0 50px var(--accent);
+    transition: 0.3s ease;
+    opacity: 0;
+  }
+}
+
+%buttons {
+  padding: 0.6em 1.5em;
+  border-radius: 2em;
+  background: var(--box-background);
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 1.1em;
+  cursor: pointer;
+  letter-spacing: $letter-spacing;
+  transition: 0.3s ease;
+  &:hover {
+    color: var(--text-color);
+  }
+}
+
+%d-flex {
+  display: flex;
+}
+
+%d-flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+%d-flex-column-j-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+%d-flex-column-j-between {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+%d-flex-column-j-center-a-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+%d-flex-j-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+%d-flex-align-center {
+  display: flex;
+  align-items: center;
+}
+
+%d-flex-column-j-center-a-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+%d-flex-j-center-a-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+%d-flex-j-center {
+  display: flex;
+  justify-content: center;
+}

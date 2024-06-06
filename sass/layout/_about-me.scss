@@ -1,0 +1,95 @@
+@use "../helper/var" as *;
+
+section.about-me {
+  padding: 0 0 5em 0;
+  .about-container {
+    @extend %d-flex-column-j-center-a-center;
+    width: 80%;
+    margin: 0 auto;
+    gap: 2em;
+
+    .title {
+      h1 {
+        font-size: 3em;
+        font-weight: 900;
+        color: var(--accent);
+      }
+    }
+
+    .content {
+      @extend %d-flex;
+      width: 100%;
+      gap: 5em;
+      .image {
+        position: relative;
+        width: 35%;
+
+        .line-1 {
+          position: absolute;
+
+          height: 0.2em;
+          background-color: var(--accent);
+          top: -1em;
+          left: -10%;
+        }
+
+        .line-2 {
+          position: absolute;
+          width: 0.2em;
+          background-color: var(--accent);
+          left: -1em;
+          top: -5%;
+        }
+
+        .line-3 {
+          position: absolute;
+          width: 0.2em;
+          background-color: var(--accent);
+          right: -1em;
+          bottom: -5%;
+        }
+
+        .line-4 {
+          position: absolute;
+          height: 0.2em;
+          background-color: var(--accent);
+          bottom: -1em;
+          right: -10%;
+        }
+      }
+
+      .info {
+        @extend %d-flex-column;
+        width: 65%;
+        gap: 2em;
+        .sub-title {
+          h2 {
+            font-size: 2em;
+            font-weight: 700;
+            color: var(--accent);
+            letter-spacing: 1px;
+          }
+        }
+
+        .info-container {
+          @extend %d-flex-column;
+          gap: 5em;
+          .text {
+            @extend %d-flex-column;
+            gap: 1em;
+            p {
+              font-size: 1.5em;
+            }
+          }
+
+          .btn {
+            a {
+              @extend %buttons;
+              text-decoration: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}

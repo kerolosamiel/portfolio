@@ -1,0 +1,59 @@
+@use "../helper/var";
+
+section.needed {
+  padding: 0 0 5em 0;
+
+  .needed-container {
+    @extend %d-flex-column-j-center-a-center;
+    width: 90%;
+    margin: 0 auto;
+    gap: 3em;
+    .title {
+      h1 {
+        font-size: 3em;
+        font-weight: 900;
+        color: var(--accent);
+      }
+    }
+
+    .content {
+      @extend %d-flex;
+      flex-wrap: wrap;
+      width: 100%;
+      column-gap: 2em;
+      row-gap: 5em;
+      .serv {
+        @extend %d-flex;
+        width: calc((100% - 4em) / 3);
+        gap: 1em;
+        .icon {
+          @extend %d-flex-j-center-a-center;
+          width: 7em;
+          height: 2.5em;
+          background-color: var(--box-background);
+          border-radius: 0.5em;
+        }
+
+        .info {
+          @extend %d-flex-column;
+          gap: 1em;
+
+          .sub-title {
+            h2 {
+              letter-spacing: 1px;
+              font-weight: 800;
+              color: var(--accent);
+            }
+          }
+
+          .text {
+            p {
+              letter-spacing: 0.1px;
+              line-height: 1.4;
+            }
+          }
+        }
+      }
+    }
+  }
+}
