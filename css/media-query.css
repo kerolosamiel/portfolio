@@ -1,12 +1,12 @@
 @media (min-width: 1440px) {
   body {
-    font-size: 20px;
+    font-size: 22px;
   }
 }
 
 @media (min-width: 2000px) {
   body {
-    font-size: 26px;
+    font-size: 30px;
   }
 }
 
