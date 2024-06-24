@@ -43,6 +43,13 @@ $links-font-weight: 500;
   }
 }
 
+%sec-titles {
+  font-size: 3em;
+  font-weight: 900;
+  color: var(--accent);
+  text-align: center;
+}
+
 %d-flex {
   display: flex;
 }

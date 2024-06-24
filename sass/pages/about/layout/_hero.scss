@@ -1,0 +1,88 @@
+@use "../../../helper/var" as *;
+
+.hero {
+  @extend %d-flex;
+
+  .info {
+    width: 50%;
+    padding: 2em 2.5em;
+
+    .disc {
+      padding-bottom: 3em;
+      border-bottom: 2px solid var(--accent);
+      .title {
+        h3 {
+          width: fit-content;
+          padding: 0.4em;
+          border-radius: 0.2em;
+          background: var(--box-background);
+          letter-spacing: $letter-spacing;
+          font-size: 1em;
+        }
+
+        h1 {
+          font-size: 3em;
+          font-weight: 900;
+          line-height: 5rem;
+          color: var(--accent);
+          margin: 0;
+          letter-spacing: 1px;
+        }
+      }
+
+      p {
+        font-size: 1.3em;
+        line-height: 1.5em;
+      }
+    }
+
+    .statistics {
+      display: flex;
+      gap: 3em;
+      flex-wrap: wrap;
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+      padding: 1em 1.5em;
+      border-bottom: 2px solid var(--accent);
+
+      .statistic {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+
+        h2 {
+          color: var(--accent);
+          font-size: 2em;
+          letter-spacing: 1px;
+        }
+
+        p {
+          letter-spacing: 0.5px;
+        }
+      }
+    }
+  }
+
+  .image {
+    width: 50%;
+    @extend %d-flex-j-center-a-center;
+    display: flex;
+    text-align: center;
+    filter: drop-shadow(0 0 2px var(--text-color));
+
+    h1 {
+      font-size: 7.5em;
+      font-weight: 900;
+      background-image: url(../../../../images/about-me.jpg);
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      background-repeat: no-repeat;
+      line-height: 0.8;
+      letter-spacing: -5px;
+      margin: 0.2em;
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+}
