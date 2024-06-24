@@ -239,7 +239,7 @@ footer .footer-container, .header-container {
 .hero .image h1 {
   font-size: 7.5em;
   font-weight: 900;
-  background-image: url(../../../../images/about-me.jpg);
+  background-image: url(https://raw.githubusercontent.com/kerolos23/portfolio/main/images/about-me.JPG);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
           background-clip: text;
