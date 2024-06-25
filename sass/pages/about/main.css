@@ -245,6 +245,7 @@ footer .footer-container, .header-container {
           background-clip: text;
   background-repeat: no-repeat;
   background-position: center;
+  background-size: contain;
   line-height: 0.8;
   letter-spacing: -5px;
   margin: 0.2em;
