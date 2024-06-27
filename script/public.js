@@ -2,9 +2,11 @@ const loadingElement = document.querySelector(".loading-container");
 const body = document.body;
 
 function handleLoading() {
-  loadingElement.classList.remove("active");
+  setTimeout(() => {
+    loadingElement.classList.remove("active");
 
-  body.style.overflow = "unset";
+    body.style.overflow = "unset";
+  }, 500);
 }
 
 window.addEventListener("load", handleLoading);
