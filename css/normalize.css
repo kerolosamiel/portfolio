@@ -25,6 +25,9 @@ html {
   --accent: #ffc760;
   --text-color: #cff8ff;
   --box-background: #103f52;
+  --error-color: #bb2124;
+  --loading: rgb(186, 66, 255);
+  --loading-second: rgb(0, 225, 255);
 }
 
 .light {
@@ -54,6 +57,7 @@ body {
   color: var(--text-color);
   font-family: "Satoshi", sans-serif;
   transition: 1s ease;
+  overflow: hidden;
 }
 
 img {

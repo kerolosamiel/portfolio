@@ -16,6 +16,40 @@
     gap: 3rem;
     box-shadow: 0 0 10px var(--text-color);
 
+    .complite-message,
+    .error-message {
+      position: fixed;
+      left: -100%;
+      top: 5%;
+      padding: 1em;
+      display: flex;
+      gap: 1em;
+      align-items: center;
+      min-width: 250px;
+      border-radius: 0.5em;
+      border: 2px solid var(--accent);
+      background: var(--box-background);
+      transition: 0.3s ease;
+      z-index: 2;
+
+      i {
+        font-size: 1.5em;
+        color: var(--accent);
+      }
+
+      &.active {
+        left: 2%;
+      }
+    }
+
+    .error-message {
+      border: 2px solid var(--error-color);
+
+      i {
+        color: var(--error-color);
+      }
+    }
+
     .header {
       h1 {
         font-size: 2.5rem;
@@ -46,7 +80,7 @@
             height: 2.5rem;
             padding: 10px 0;
             color: var(--text-color);
-            margin-bottom: 30px;
+            margin-bottom: 20px;
             border: none;
             border-bottom: 1px solid var(--accent);
             outline: none;

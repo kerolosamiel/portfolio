@@ -21,6 +21,13 @@
     <title>THE KERO</title>
   </head>
   <body>
+    <!-- Loading -->
+    <div class="loading-container active">
+      <div class="spinner">
+        <div class="spinner1"></div>
+      </div>
+    </div>
+
     <!-- Nav Bar -->
     <header>
       <div class="header-container">
@@ -296,6 +303,16 @@
     <section class="contact" id="contact">
       <div class="contact-container">
         <div class="send-mail">
+          <div class="complite-message">
+            <i class="fa-regular fa-circle-check"></i>
+            <h2>Email Sent :)</h2>
+          </div>
+
+          <div class="error-message">
+            <i class="fa-solid fa-triangle-exclamation"></i>
+            <h2>Please try again :(</h2>
+          </div>
+
           <div class="header">
             <h1>Let’s work together!</h1>
 
@@ -304,18 +321,24 @@
 
           <div class="form">
             <form>
-              <div class="user-box">
-                <input type="text" name="Name" required />
+              <div class="user-box" id="full-name">
+                <input type="text" name="Name" required autocomplete="off" />
                 <label>Full Name</label>
               </div>
 
-              <div class="user-box">
-                <input type="email" name="Email" required autocomplete="off" />
+              <div class="user-box" id="email">
+                <input type="text" name="Email" required autocomplete="off" />
                 <label>Email Address</label>
               </div>
 
               <div class="user-box">
-                <input type="text" name="Number" required autocomplete="off" />
+                <input
+                  type="text"
+                  name="Number"
+                  required
+                  autocomplete="off"
+                  id="phone-number"
+                />
                 <label>Phone Number</label>
               </div>
 
@@ -323,8 +346,8 @@
                 <textarea
                   type="text"
                   name="Message"
-                  required
                   id="message"
+                  required
                   autocomplete="off"
                 ></textarea>
                 <label>Your Message</label>
@@ -417,6 +440,8 @@
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/TextPlugin.min.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="script/public.js"></script>
     <script src="script/main.js"></script>
     <script src="script/animation.js"></script>
   </body>

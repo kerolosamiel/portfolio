@@ -92,6 +92,49 @@ section.hero .hero-container {
   justify-content: center;
 }
 
+.loading-container {
+  display: flex;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: var(--background-color);
+  top: 0;
+  left: -105%;
+  opacity: 0;
+  visibility: hidden;
+  transition: 2s ease;
+  z-index: 100;
+}
+.loading-container .spinner {
+  background-image: linear-gradient(var(--loading) 35%, var(--loading-second));
+  width: 200px;
+  height: 200px;
+  animation: spinning82341 1.7s linear infinite;
+  text-align: center;
+  border-radius: 50%;
+  filter: blur(1px);
+  box-shadow: 0px -5px 20px 0px var(--loading), 0px 5px 20px 0px var(--loading-second);
+}
+.loading-container .spinner .spinner1 {
+  background-color: rgb(36, 36, 36);
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  filter: blur(10px);
+}
+.loading-container.active {
+  left: 0;
+  opacity: 1;
+  visibility: visible;
+}
+@keyframes spinning82341 {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 .header-container {
   align-items: center;
   width: 90%;
@@ -468,6 +511,37 @@ section.needed .needed-container .content .serv .info .text p {
   gap: 3rem;
   box-shadow: 0 0 10px var(--text-color);
 }
+.contact-container .send-mail .complite-message,
+.contact-container .send-mail .error-message {
+  position: fixed;
+  left: -100%;
+  top: 5%;
+  padding: 1em;
+  display: flex;
+  gap: 1em;
+  align-items: center;
+  min-width: 250px;
+  border-radius: 0.5em;
+  border: 2px solid var(--accent);
+  background: var(--box-background);
+  transition: 0.3s ease;
+  z-index: 2;
+}
+.contact-container .send-mail .complite-message i,
+.contact-container .send-mail .error-message i {
+  font-size: 1.5em;
+  color: var(--accent);
+}
+.contact-container .send-mail .complite-message.active,
+.contact-container .send-mail .error-message.active {
+  left: 2%;
+}
+.contact-container .send-mail .error-message {
+  border: 2px solid var(--error-color);
+}
+.contact-container .send-mail .error-message i {
+  color: var(--error-color);
+}
 .contact-container .send-mail .header h1 {
   font-size: 2.5rem;
   letter-spacing: 1px;
@@ -494,7 +568,7 @@ section.needed .needed-container .content .serv .info .text p {
   height: 2.5rem;
   padding: 10px 0;
   color: var(--text-color);
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   border: none;
   border-bottom: 1px solid var(--accent);
   outline: none;
