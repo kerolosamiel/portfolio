@@ -28,6 +28,7 @@ html {
   --error-color: #bb2124;
   --loading: rgb(186, 66, 255);
   --loading-second: rgb(0, 225, 255);
+  --loading-bg: #132f3a;
 }
 
 .light {

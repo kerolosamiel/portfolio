@@ -73,7 +73,6 @@ footer .footer-container, .header-container {
   background-color: var(--background-color);
   top: 0;
   left: -105%;
-  opacity: 0;
   visibility: hidden;
   transition: 2s ease;
   z-index: 100;
@@ -97,7 +96,6 @@ footer .footer-container, .header-container {
 }
 .loading-container.active {
   left: 0;
-  opacity: 1;
   visibility: visible;
 }
 @keyframes spinning82341 {
