@@ -1,5 +1,7 @@
 const loadingElement = document.querySelector(".loading-container");
 const body = document.body;
+const burgerElement = document.querySelector(".burger-icon");
+const navigationBar = document.querySelector(".nav");
 
 function handleLoading() {
   setTimeout(() => {
@@ -10,3 +12,12 @@ function handleLoading() {
 }
 
 window.addEventListener("load", handleLoading);
+
+function toggleClass(element) {
+  element.classList.toggle("active");
+}
+
+burgerElement.addEventListener("click", () => {
+  toggleClass(burgerElement);
+  toggleClass(navigationBar);
+});

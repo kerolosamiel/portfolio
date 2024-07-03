@@ -41,47 +41,6 @@
 }
 
 @media (max-width: 990.98px) {
-  header {
-    position: relative;
-    z-index: 10;
-  }
-
-  .header-container .burger-icon {
-    display: flex;
-  }
-
-  .header-container .nav {
-    position: absolute;
-    flex-direction: column;
-    background: var(--box-background);
-    top: 100%;
-    right: 0;
-    width: 50%;
-    height: 0;
-    overflow: hidden;
-    border-bottom-left-radius: 1em;
-    border-bottom-right-radius: 1em;
-    transition: 0.3s ease;
-  }
-  .header-container .nav.active {
-    height: 280px;
-  }
-
-  .header-container .nav ul {
-    display: flex;
-    flex-direction: column;
-    margin-top: 2em;
-  }
-
-  .header-container .nav ul a {
-    font-size: 1.3em;
-  }
-
-  .header-container .nav button {
-    margin-bottom: 2em;
-    background-color: var(--background-color);
-  }
-
   .title h1 {
     text-align: center;
   }
@@ -248,10 +207,6 @@
     font-size: 1.1rem;
   }
 
-  footer .footer-container {
-    justify-content: center;
-  }
-
   .header-container .nav {
     width: 100%;
   }
@@ -292,10 +247,6 @@
   .contact-container .contact-info .contact-info-cont .info-bx .info a {
     font-size: 1em;
   }
-
-  footer .footer-container .copy-right p {
-    font-size: 0.9em;
-  }
 }
 
 @media (max-width: 350px) {
@@ -323,9 +274,5 @@
 
   .contact-container .contact-info .contact-info-cont .info-bx .info a {
     font-size: 0.9em;
-  }
-
-  footer .footer-container .copy-right p {
-    font-size: 0.7em;
   }
 }

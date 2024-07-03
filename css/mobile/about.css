@@ -1,0 +1,180 @@
+@media (max-width: 990.98px) {
+  .hero {
+    flex-direction: column;
+  }
+
+  .hero .info {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .hero .image {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .team-container .team-bx {
+    flex-direction: column;
+    gap: 5em;
+  }
+
+  .feedbacks .feedbacks-container .feedbacks-bx {
+    min-height: calc(26em * 2);
+  }
+
+  .feedbacks .feedbacks-container .feedbacks-bx .feedbacks-line {
+    flex-direction: column;
+    gap: 8em;
+  }
+
+  .services .services-container .services-bx .service {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .services .services-container .services-bx .service p {
+    width: unset;
+  }
+}
+
+@media (max-width: 670.98px) {
+  .hero .image {
+    width: 100% !important;
+  }
+
+  .faqs .faqs-container .title h1,
+  .feedbacks .feedbacks-container .title h1,
+  .team-container .title h1,
+  .services .services-container .title h1 {
+    font-size: 2.5em;
+  }
+
+  .hero .info .disc .title h1 {
+    font-size: 2.5em;
+    line-height: 1.5;
+  }
+
+  .hero .info .disc .title h3 {
+    font-size: 0.8em;
+  }
+
+  .faqs .faqs-container .faqs-bx .faq .question h2 {
+    font-size: 1.2em;
+  }
+
+  .faqs .faqs-container {
+    width: 90%;
+  }
+
+  .hero .info {
+    width: 100% !important;
+  }
+
+  .faqs .faqs-container .faq.active .answer {
+    max-height: 360px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero .image h1 {
+    font-size: 5.5em;
+  }
+}
+
+@media (max-width: 400px) {
+  .team-container .team-bx .member {
+    width: 90%;
+  }
+
+  .feedbacks .feedbacks-container .feedbacks-bx .feedbacks-line {
+    width: 90%;
+  }
+
+  .feedbacks .feedbacks-container .feedbacks-bx .feedbacks-line .feedback {
+    width: 100%;
+  }
+
+  .feedbacks
+    .feedbacks-container
+    .feedbacks-bx
+    .feedbacks-line
+    .feedback::after {
+    width: 80%;
+    left: 10%;
+  }
+
+  .faqs .faqs-container .faqs-bx .faq .question {
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  .hero .image h1 {
+    font-size: 4.5em !important;
+  }
+
+  .faqs .faqs-container .title h1,
+  .feedbacks .feedbacks-container .title h1,
+  .team-container .title h1,
+  .services .services-container .title h1 {
+    font-size: 2em !important;
+  }
+
+  .hero .info .disc .title h1 {
+    font-size: 2em !important ;
+  }
+
+  .hero .info .disc .title h3 {
+    font-size: 0.6em;
+  }
+
+  .hero .info .disc p {
+    font-size: 1.1em;
+    line-height: 1.4em;
+  }
+
+  .faqs .faqs-container .title h3 {
+    text-align: center;
+  }
+
+  .faqs .faqs-container .faqs-bx .faq .question h2 {
+    text-align: center;
+  }
+
+  .services .services-container .services-bx .service p {
+    font-size: 1.1em;
+  }
+
+  .services .services-container .services-bx .service {
+    gap: 2em;
+  }
+}
+
+@media (max-width: 345px) {
+  .feedbacks .feedbacks-container .feedbacks-bx {
+    min-height: calc(28em * 2);
+  }
+
+  .faqs .faqs-container .title h1,
+  .feedbacks .feedbacks-container .title h1,
+  .team-container .title h1,
+  .services .services-container .title h1 {
+    font-size: 1.5em !important;
+  }
+
+  .hero .info .disc .title h1 {
+    font-size: 1.5em !important;
+    line-height: 2;
+  }
+
+  .hero .info {
+    padding: 0 1.5em;
+  }
+
+  .services .services-container .services-bx .service {
+    padding: 2.5em 0;
+  }
+
+  .faqs .faqs-container .faqs-bx .faq {
+    padding: 1.5em 1em 1em;
+  }
+}

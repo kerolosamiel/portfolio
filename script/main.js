@@ -9,17 +9,6 @@ const mobileProjectImages = document.querySelectorAll(
 );
 const heroSectionHeight = document.querySelector(".hero").offsetHeight;
 const projectsSectionHeight = document.querySelector(".projects").offsetHeight;
-const burgerElement = document.querySelector(".burger-icon");
-const navigationBar = document.querySelector(".nav");
-
-function toggleActiveClass(element) {
-  element.classList.toggle("active");
-}
-
-burgerElement.addEventListener("click", () => {
-  toggleActiveClass(burgerElement);
-  toggleActiveClass(navigationBar);
-});
 
 // Split the text into individual characters and wrap each character in a span with a rotate style
 rotatingTextElement.innerHTML = rotatingTextElement.innerText
