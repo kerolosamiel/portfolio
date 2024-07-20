@@ -1,5 +1,5 @@
 // Select the elements
-const rotatingTextElement = document.querySelector(".circle p");
+let rotatingTextElement = document.querySelector(".circle p");
 const projectLinks = document.querySelectorAll(".projects-botton a:not(#not)");
 const desktopProjectImages = document.querySelectorAll(
   ".mac .projects-img img"
