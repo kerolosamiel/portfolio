@@ -1,5 +1,4 @@
 const loadingContainer = document.querySelector(".loading-container");
-const bodyElement = document.body;
 const burgerIcon = document.querySelector(".burger-icon");
 const navigationMenu = document.querySelector(".nav");
 
