@@ -1,23 +1,56 @@
-const loadingElement = document.querySelector(".loading-container");
-const body = document.body;
-const burgerElement = document.querySelector(".burger-icon");
-const navigationBar = document.querySelector(".nav");
+const loadingContainer = document.querySelector(".loading-container");
+const bodyElement = document.body;
+const burgerIcon = document.querySelector(".burger-icon");
+const navigationMenu = document.querySelector(".nav");
 
-function handleLoading() {
-  setTimeout(() => {
-    loadingElement.classList.remove("active");
+// Function to handle loading screen
+function hideLoadingScreen() {
+  loadingContainer.classList.remove("active");
 
-    body.style.overflow = "unset";
-  }, 500);
+  bodyElement.style.overflow = "unset";
 }
 
-window.addEventListener("load", handleLoading);
+window.addEventListener("load", hideLoadingScreen);
 
+// Function to toggle the 'active' class on an element
 function toggleClass(element) {
   element.classList.toggle("active");
 }
 
-burgerElement.addEventListener("click", () => {
-  toggleClass(burgerElement);
-  toggleClass(navigationBar);
+burgerIcon.addEventListener("click", () => {
+  toggleClass(burgerIcon);
+  toggleClass(navigationMenu);
 });
+
+// Select the scroll-to-top button
+const scrollToTopButton = document.querySelector(".scroll-button");
+
+// Function to add the 'active' class to an element
+function addActiveClass(element) {
+  element.classList.add("active");
+}
+
+// Function to remove the 'active' class from an element
+function removeActiveClass(element) {
+  element.classList.remove("active");
+}
+
+// Function to handle the scroll event and show/hide the scroll-to-top button
+function handleScrollEvent() {
+  if (scrollY > 315) {
+    addActiveClass(scrollToTopButton);
+  } else {
+    removeActiveClass(scrollToTopButton);
+  }
+}
+
+// Function to scroll to the top of the page when the scroll-to-top button is clicked
+function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+}
+
+window.addEventListener("scroll", handleScrollEvent);
+scrollToTopButton.addEventListener("click", scrollToTop);

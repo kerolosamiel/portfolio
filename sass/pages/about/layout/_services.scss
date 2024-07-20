@@ -2,6 +2,7 @@
 
 .services {
   margin: 5em 0;
+
   .services-container {
     display: flex;
     flex-direction: column;
@@ -27,10 +28,12 @@
 
       .service {
         display: flex;
+        cursor: pointer;
         gap: 3em;
         justify-content: space-between;
         align-items: center;
         padding: 2.5em 1em;
+        position: relative;
 
         .title {
           display: flex;
@@ -67,6 +70,179 @@
           i {
             font-size: 1.5em;
             color: var(--accent);
+          }
+        }
+      }
+
+      .show-more-container {
+        display: flex;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background-color: #103f524d;
+        z-index: 99;
+        top: 0;
+        right: 0;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.4s ease;
+        cursor: pointer;
+
+        .show-more {
+          position: absolute;
+          display: flex;
+          width: 80%;
+          height: 85%;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%) scale(0);
+          opacity: 0;
+          background-color: var(--box-background);
+          padding: 4em 3em 1em;
+          border-radius: 1em;
+          border: 1px solid var(--accent);
+          gap: 2em;
+          transition: 0.6s ease;
+          cursor: default;
+
+          .close {
+            position: absolute;
+            width: 3em;
+            height: 3em;
+            border-radius: 50%;
+            border: 2px dashed var(--accent);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            right: 4%;
+            top: 1em;
+            cursor: pointer;
+
+            i {
+              font-size: 1.4em;
+              transition: 0.3s ease;
+              transform: rotate(0);
+            }
+
+            &:hover {
+              i {
+                transform: rotate(180deg);
+              }
+            }
+          }
+
+          .info {
+            display: flex;
+            flex-direction: column;
+            width: 55%;
+            padding: 1em;
+            gap: 1.5em;
+
+            .info-title {
+              display: flex;
+              flex-direction: column;
+              gap: 0.75em;
+
+              h2 {
+                font-size: 1.9em;
+                letter-spacing: 1px;
+                color: var(--accent);
+              }
+
+              .line {
+                width: 100%;
+                height: 0.1em;
+                background: var(--accent);
+              }
+
+              p {
+                width: unset;
+              }
+            }
+
+            .features {
+              display: flex;
+              flex-direction: column;
+              gap: 1em;
+
+              h3 {
+                font-size: 1.5em;
+                letter-spacing: 1px;
+                color: var(--accent);
+              }
+
+              ol {
+                display: flex;
+                flex-direction: column;
+                list-style: none;
+                gap: 0.5em;
+
+                li {
+                  font-size: 1.4em;
+                  letter-spacing: 0.5px;
+                }
+              }
+            }
+
+            .buttons {
+              display: flex;
+              justify-content: space-between;
+
+              a {
+                position: relative;
+                width: 45%;
+                height: unset;
+                border-radius: 0.5em;
+                font-size: 1.3em;
+                color: var(--text-color);
+                letter-spacing: 0.1em;
+                padding: 0.5em 0.7em;
+                border: 2px solid var(--accent);
+                overflow: hidden;
+                text-align: center;
+                text-decoration: none;
+
+                &::after {
+                  content: "";
+                  position: absolute;
+                  left: 0;
+                  top: 0;
+                  width: 100%;
+                  height: 100%;
+                  background: #071c2463;
+                  transform: scaleX(0);
+                  transition: 0.3s ease;
+                  z-index: -1;
+                }
+
+                &:hover {
+                  &::after {
+                    transform: scale(1);
+                  }
+                }
+              }
+            }
+          }
+
+          .image {
+            width: 45%;
+            height: 90%;
+            margin: 2.5% 0;
+            border-radius: 1em;
+            overflow: hidden;
+            img {
+              object-fit: cover;
+            }
+          }
+        }
+
+        &.active {
+          opacity: 1;
+          visibility: visible;
+
+          .show-more {
+            transform: translate(-50%, -50%) scale(1);
+            opacity: 1;
           }
         }
       }

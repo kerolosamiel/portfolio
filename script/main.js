@@ -23,6 +23,7 @@ const tm = gsap.timeline({
   default: {
     duration: 5,
   },
+  delay: 1,
 });
 
 let currentProjectIndex = 0;
@@ -33,7 +34,7 @@ function clearAllActiveClasses(elements) {
 }
 
 // Function to add the 'active' class to the element at the current project index in a NodeList
-function setActiveClass(elements) {
+function addActiveClass(elements) {
   elements.classList.add("active");
 }
 
@@ -42,9 +43,9 @@ function CycleThroughProjects() {
   clearAllActiveClasses(projectLinks);
   clearAllActiveClasses(desktopProjectImages);
   clearAllActiveClasses(mobileProjectImages);
-  setActiveClass(projectLinks[currentProjectIndex]);
-  setActiveClass(desktopProjectImages[currentProjectIndex]);
-  setActiveClass(mobileProjectImages[currentProjectIndex]);
+  addActiveClass(projectLinks[currentProjectIndex]);
+  addActiveClass(desktopProjectImages[currentProjectIndex]);
+  addActiveClass(mobileProjectImages[currentProjectIndex]);
 }
 
 // Set an interval to update the displayed project every 3 seconds
@@ -72,15 +73,17 @@ window.addEventListener("scroll", () => {
   }
 });
 
-const form = document.querySelector(".send-mail .form form");
-const fullNameElement = document.querySelector("#full-name");
-const emailElement = document.querySelector("#email");
+// Select the form and input elements
+const contactForm = document.querySelector(".send-mail .form form");
+const fullNameInput = document.querySelector("#full-name");
+const emailInput = document.querySelector("#email");
 const messageInput = document.querySelector("#message");
-const phoneNumberInput = document.querySelector("#phone-number");
-const compliteMessage = document.querySelector(".complite-message");
-const errorMessage = document.querySelector(".error-message");
+const phoneInput = document.querySelector("#phone-number");
+const successMessageElement = document.querySelector(".complite-message");
+const errorMessageElement = document.querySelector(".error-message");
 
-function sendEmail() {
+// Function to send an email using SMTP
+function sendEmailNotification() {
   Email.send({
     Host: "smtp.elasticemail.com",
     Username: "kerolosamiel4@gmail.com",
@@ -92,34 +95,37 @@ function sendEmail() {
       ${messageInput.value}
       <br><br>
 
-      ${fullNameElement.querySelector("input").value} <br>
-      Email: ${emailElement.querySelector("input").value}<br>
-      Phone number: ${phoneNumberInput.value}
+      ${fullNameInput.querySelector("input").value} <br>
+      Email: ${emailInput.querySelector("input").value}<br>
+      Phone number: ${phoneInput.value}
 
     `,
-  }).then((message) => {
-    if (message == "OK") {
-      showAlert(compliteMessage);
+  }).then((response) => {
+    if (response == "OK") {
+      displayAlert(successMessageElement);
     } else {
-      showAlert(errorMessage);
+      displayAlert(errorMessageElement);
     }
   });
 }
 
-function showAlert(element) {
-  setActiveClass(element);
+// Function to display an alert message
+function displayAlert(element) {
+  addActiveClass(element);
 
+  // Remove the alert message after 1.5 seconds
   setTimeout(() => {
     removeActiveClass(element);
   }, 1500);
 }
 
+// Function to remove the 'active' class from an element
 function removeActiveClass(element) {
   element.classList.remove("active");
 }
 
-form.addEventListener("submit", (event) => {
+contactForm.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  sendEmail();
+  sendEmailNotification(); // Send the email notification
 });

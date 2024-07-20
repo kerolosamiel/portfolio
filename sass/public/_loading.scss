@@ -12,7 +12,7 @@
   left: -105%;
   visibility: hidden;
   transition: 2s ease;
-  z-index: 100;
+  z-index: 999;
 
   .spinner {
     background-image: linear-gradient(

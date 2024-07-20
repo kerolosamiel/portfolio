@@ -35,6 +35,24 @@
   .services .services-container .services-bx .service p {
     width: unset;
   }
+
+  .services
+    .services-container
+    .services-bx
+    .show-more-container
+    .show-more
+    .image {
+    display: none;
+  }
+
+  .services
+    .services-container
+    .services-bx
+    .show-more-container
+    .show-more
+    .info {
+    width: 100%;
+  }
 }
 
 @media (max-width: 670.98px) {
@@ -78,6 +96,34 @@
 @media (max-width: 480px) {
   .hero .image h1 {
     font-size: 5.5em;
+  }
+
+  .services .services-container .services-bx .show-more-container .show-more {
+    padding: 2em 1em 1em;
+    height: 90%;
+  }
+
+  .services
+    .services-container
+    .services-bx
+    .show-more-container
+    .show-more
+    .info
+    .buttons {
+    flex-direction: column;
+    gap: 0.5em;
+    width: 100%;
+  }
+
+  .services
+    .services-container
+    .services-bx
+    .show-more-container
+    .show-more
+    .info
+    .buttons
+    a {
+    width: unset;
   }
 }
 

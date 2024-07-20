@@ -104,7 +104,7 @@ section.hero .hero-container {
   left: -105%;
   visibility: hidden;
   transition: 2s ease;
-  z-index: 100;
+  z-index: 999;
 }
 .loading-container .spinner {
   background-image: linear-gradient(var(--loading) 35%, var(--loading-second));
@@ -131,6 +131,30 @@ section.hero .hero-container {
   to {
     transform: rotate(360deg);
   }
+}
+
+.scroll-button {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.9em;
+  padding-bottom: 0.8em;
+  border-radius: 0.5em;
+  background-color: var(--box-background);
+  bottom: 5%;
+  right: 5%;
+  cursor: pointer;
+  z-index: 100;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  transition: 0.3s ease;
+  opacity: 0;
+  visibility: hidden;
+}
+.scroll-button.active {
+  opacity: 1;
+  visibility: visible;
 }
 
 .header-container {

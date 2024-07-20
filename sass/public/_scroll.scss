@@ -1,0 +1,26 @@
+@use "../helper/var" as *;
+
+.scroll-button {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.9em;
+  padding-bottom: 0.8em;
+  border-radius: 0.5em;
+  background-color: var(--box-background);
+  bottom: 5%;
+  right: 5%;
+  cursor: pointer;
+  z-index: 100;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  transition: 0.3s ease;
+  opacity: 0;
+  visibility: hidden;
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+  }
+}
