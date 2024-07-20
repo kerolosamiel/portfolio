@@ -6,19 +6,19 @@ const navigationMenu = document.querySelector(".nav");
 function hideLoadingScreen() {
   loadingContainer.classList.remove("active");
 
-  bodyElement.style.overflow = "unset";
+  document.body.style.overflow = "unset";
 }
 
 window.addEventListener("load", hideLoadingScreen);
 
 // Function to toggle the 'active' class on an element
-function toggleClass(element) {
+function toggleActiveClass(element) {
   element.classList.toggle("active");
 }
 
 burgerIcon.addEventListener("click", () => {
-  toggleClass(burgerIcon);
-  toggleClass(navigationMenu);
+  toggleActiveClass(burgerIcon);
+  toggleActiveClass(navigationMenu);
 });
 
 // Select the scroll-to-top button
