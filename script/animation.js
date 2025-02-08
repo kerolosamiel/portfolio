@@ -138,14 +138,14 @@ aboutTextTm
     duration: 1,
     text: {
       value:
-        "My name is Kerolos Amiel, I am a self-taught creative frontend developer based in Egypt. I am passional in catering my works for emerging start, upsand small businesses that make an impact, inspire and connect with people",
+        "As a Full Stack .NET Developer with a strong foundation in both front-end and back-end technologies, I specialize in crafting dynamic, responsive, and user-friendly web applications. My expertise spans HTML5, CSS3, JavaScript/TypeScript, React.js, Next.js, ASP.NET, C#, and SQL Server, allowing me to deliver high-quality, scalable solutions tailored to client needs.",
     },
   })
   .to(".about-me .info .info-container #text-2", {
     duration: 1,
     text: {
       value:
-        "I help companies from all over the world with tailor-made solutions. With each project, I push my work to new horizons, always putting quality first.",
+        "With two years of freelance experience. And structured training in the Digital Egypt Builders scholarship, I bring a blend of creativity and technical precision, ensuring seamless performance, and robust functionality. My experience spans freelancing and structured training, making me a versatile developer ready to tackle complex challenges.",
     },
   })
   .fromTo(
