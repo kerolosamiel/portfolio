@@ -145,7 +145,7 @@ aboutTextTm
     duration: 1,
     text: {
       value:
-        "With two years of freelance experience. And structured training in the Digital Egypt Builders scholarship, I bring a blend of creativity and technical precision, ensuring seamless performance, and robust functionality. My experience spans freelancing and structured training, making me a versatile developer ready to tackle complex challenges.",
+        "With two years of freelance experience. And structured training in the Digital Egypt Builders scholarship, I bring a blend of creativity and technical precision, ensuring seamless performance, and robust functionality.",
     },
   })
   .fromTo(
