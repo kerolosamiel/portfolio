@@ -1,9 +1,9 @@
 @use "../../../helper/var" as *;
 
 section.hero {
-  height: 100dvh;
+  height: calc(100dvh - 100px);
   padding: 5em 0;
-  
+
   .hero-container {
     @extend %d-flex-j-center;
     position: relative;
