@@ -274,7 +274,7 @@ section.hero .hero-container {
 
 section.hero {
   height: calc(100dvh - 100px);
-  padding: 5em 0;
+  padding: 5em 0 0;
 }
 section.hero .hero-container {
   position: relative;
