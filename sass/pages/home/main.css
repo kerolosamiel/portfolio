@@ -272,6 +272,10 @@ section.hero .hero-container {
   top: 0;
 }
 
+section.hero {
+  height: 100dvh;
+  padding: 5em 0;
+}
 section.hero .hero-container {
   position: relative;
   height: 100%;
