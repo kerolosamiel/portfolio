@@ -434,6 +434,7 @@ footer .footer-container, .header-container {
 .services .services-container .services-bx .show-more-container .show-more .info {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   width: 55%;
   padding: 1em;
   gap: 1.5em;
