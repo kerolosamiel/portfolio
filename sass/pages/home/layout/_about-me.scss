@@ -1,7 +1,7 @@
 @use "../../../helper/var" as *;
 
 section.about-me {
-  padding: 5em 0 3em 0;
+  padding: 0 0 3em 0;
   .about-container {
     @extend %d-flex-column-j-center-a-center;
     width: 80%;
@@ -76,7 +76,7 @@ section.about-me {
             @extend %d-flex-column;
             gap: 1em;
             p {
-              font-size: 1.5em;
+              font-size: 1.3em;
             }
           }
 

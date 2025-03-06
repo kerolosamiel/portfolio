@@ -2,12 +2,13 @@
 
 section.hero {
   height: calc(100dvh - 100px);
-  padding: 5em 0 0;
+  display: flex;
+  align-items: center;
 
   .hero-container {
     @extend %d-flex-j-center;
     position: relative;
-    height: 100%;
+    width: 100%;
 
     .circle {
       @extend %d-flex-j-center-a-center;
@@ -16,7 +17,7 @@ section.hero {
       height: 12.5rem;
       border-radius: 50%;
       right: 25%;
-      top: 10%;
+      top: 0;
       animation: circle 10s linear infinite;
       z-index: 1;
 
